@@ -1,0 +1,95 @@
+@import 'variables';
+@import 'mixins';
+
+.labourface-text {
+  font-family: 'labourface-regular', Helvetica, Arial, sans-serif;
+}
+
+.droid-text {
+  font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+}
+
+.hidden-text {
+  text-indent: -10000px;
+  position: absolute;
+}
+
+.page {
+  background-color: $paper-white;
+  font: 15px/21px "Droid Serif",Helvetica,Arial,sans-serif;
+  color: $regular-grey;
+  overflow: hidden;
+
+  .hidden {
+    display: none;
+  }
+
+  .header-container {
+    width: 96%;
+    margin: 0 2%;
+  }
+
+  .page-header {
+    color: $header-black;
+    font-size: 16px;
+    font-family: 'labourface-bold', Helvetica, Arial, sans-serif;
+    margin-top: 10px;
+    text-shadow: $white 0 1px;
+  }
+
+  .sub-header {
+    color: $header-black;
+    font-size: 13px;
+    font-family: 'labourface-bold', Helvetica, Arial, sans-serif;
+    margin: 5px 0;
+    text-shadow: $white 0 1px;
+  }
+
+  .secondary-header {
+    color: $header-black;
+    display: block;
+    font: 23px/28px 'labourface-bold';
+    margin: 15px 0 12px 0;
+    text-shadow: none;
+  }
+
+  .para {
+    color: #1e1e1e;
+    font: 16px/24px 'Droid Sans', sans-serif;
+    margin: 5px 0;
+  }
+
+}
+
+@include respond-to(tablet) {
+  .page {
+    .page-header {
+      font-size: 40px;
+      line-height: 48px;
+    }
+    .row {
+      overflow: hidden;
+    }
+    .column {
+      width: 50%;
+      float: left;
+    }
+  }
+}
+
+@include respond-to(desktop) {
+  .page {
+    .page-content {
+      max-width: 1026px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .header-container {
+      width: 100%;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+
+
+}

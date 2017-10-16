@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'mixins';
+
+.address-information {
+
+  margin: 0 10px;
+  text-align: left;
+  max-height: 0;
+  overflow: hidden;
+  @include transition(max-height, 0.2s, linear);
+
+  &.open {
+    max-height: 100px;
+  }
+
+
+  .address-header {
+    color: $byline-text;
+    font: bold 14px/23px 'Droid Sans', sans-serif;
+    letter-spacing: 0;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+}
+
+@include respond-to(desktop) {
+  .address-information {
+    margin-right: 45px;
+    margin-left: 45px;
+  }
+}

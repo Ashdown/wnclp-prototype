@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'mixins';
+
+.ward-finder-box {
+  background-color: $white;
+  border: solid 3px #dcdcdc;
+  border-radius: 4px;
+  margin: 5px 5px 0 5px;
+  padding-bottom: 12px;
+  text-align: center;
+
+  .detect-button-form {
+    padding-top: 10px;
+  }
+
+  .postcode-input {
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.2);
+    border: 0 none;
+    display: inline-block;
+    float: none;
+    margin: 0 4px 10px 0;
+    padding: 13px 10px;
+    border-radius: 3px;
+  }
+
+}
+
+@include respond-to(tablet) {
+  .ward-finder-box {
+    width: 320px;
+  }
+}

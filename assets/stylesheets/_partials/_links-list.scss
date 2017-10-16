@@ -1,0 +1,28 @@
+@import '../variables';
+@import '../mixins';
+
+.links-list {
+  margin-top: 10px;
+  .link {
+    color: #ee3224;
+    font-size: 13px;
+    font-family: 'labourface-bold', Helvetica, Arial, sans-serif;
+    margin: 2px 0;
+    text-shadow: $white 0 1px;
+    text-decoration: none;
+    display: inline-block;
+    &:hover {
+      color: $crimson;
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .links-list {
+    .link {
+      font-size: 16px;
+      margin: 8px 0;
+    }
+  }
+}
+

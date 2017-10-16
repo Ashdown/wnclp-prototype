@@ -1,0 +1,129 @@
+@import '../variables';
+@import '../mixins';
+
+.main-navigation {
+
+  .home-link,
+  .nav-link {
+    font-family: 'labourface-bold', Helvetica, Arial, sans-serif;
+  }
+
+  .home-link {
+    margin: 8px 4px 0 4px;
+    color: $highlight-red;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    line-height: 32px;
+    text-shadow: rgb(255, 255, 255) 0px 1px 0px;
+  }
+
+  .sub-header {
+    margin: 0 4px;
+  }
+
+  .nav-bar {
+    background: linear-gradient(to bottom, #f73b2b 0%, #f73b2b 50%, #ee3224 50%, #ee3224 100%);
+    overflow: hidden;
+  }
+
+  .menu-link {
+    float: right;
+    background-color: $highlight-red;
+    padding: 12px;
+    cursor: pointer
+  }
+
+  .horizontal-line {
+    margin-top: 2px;
+    height: 3px;
+    width: 16px;
+    border-radius: 0.5px;
+    display: block;
+    background-color: $white;
+    box-shadow: #c70007 0 1px;
+  }
+
+  .menu-link:hover .horizontal-line {
+    background-color: $yellow;
+  }
+
+  .nav-list {
+    position: fixed;
+    padding: 8px 0;
+    width: 100%;
+    background-color: $regular-grey;
+    top: 100px;
+    left: 100%;
+    @include transition(left, 0.4s, linear);
+  }
+
+  &.menu-open .nav-list {
+    left: 0;
+  }
+
+  .nav-link {
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    line-height: 32px;
+    padding: 0 15px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: rgb(48, 48, 48) 0px 1px 0px;
+    text-decoration: none;
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .main-navigation {
+    .home-link {
+      font-size: 38.5px;
+      line-height: 35px;
+    }
+    .menu-link {
+      display: none;
+    }
+    .nav-bar {
+      margin-top: 8px;
+    }
+    .nav-list {
+      position: static;
+      background-color: transparent;
+      padding: 0;
+    }
+    .nav-link {
+      font-size: 18px;
+      line-height: 70px;
+      border-right: #ff4a34 1px solid;
+      padding: 0 10px;
+      text-shadow: rgb(199, 0, 7) 0px 1px 0px;
+    }
+    .nav-item {
+      float: left;
+      border-right: #d70e14 1px solid;
+    }
+  }
+}
+
+@include respond-to(desktop) {
+  .main-navigation {
+    .nav-link {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .nav-list {
+      max-width: 1026px;
+      margin-left: auto;
+      margin-right: auto;
+      border-left: #ff4a34 1px solid;
+      overflow: hidden;
+    }
+    .nav-item:first-child {
+      border-left: #d70e14 1px solid;
+    }
+  }
+}

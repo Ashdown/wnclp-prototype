@@ -1,0 +1,67 @@
+@import 'variables';
+@import 'mixins';
+
+.social-media-icons {
+
+  text-align: left;
+  margin-top: 10px;
+  padding: 0 5px;
+
+  .link {
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 26px;
+    margin: 3px 5px 0 0;
+    font-family: 'labourface-bold';
+    color: $header-black;
+  }
+
+  .facebook-icon,
+  .twitter-icon {
+    font-family: 'LabourIcons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    color:$highlight-red;
+    font-size: 40px;
+    opacity: 0.8;
+    margin-right: 10px;
+  }
+
+  .text {
+    position: relative;
+    bottom: 10px;
+  }
+
+  .link:hover {
+    .facebook-icon,
+    .twitter-icon{
+      opacity: 1;
+    }
+  }
+
+  .twitter-icon {
+    color: #40bff5;
+    &:before {
+      content: "\e017";
+    }
+  }
+  .facebook-icon {
+    color: #5d82d1;
+    &:before {
+      content: "\e011";
+    }
+  }
+}
+
+@include respond-to(desktop) {
+  .social-media-icons {
+    padding-right: 75px;
+    padding-left: 75px;
+  }
+}

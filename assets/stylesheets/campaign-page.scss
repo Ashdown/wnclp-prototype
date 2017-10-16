@@ -1,0 +1,25 @@
+@import 'variables';
+@import 'mixins';
+
+.campaign-page {
+
+  padding-bottom: 30px;
+  .text {
+    display: block;
+  }
+}
+
+@include respond-to(tablet) {
+  .campaign-page {
+    .celebration-image {
+      float: left;
+      margin-right: 16px;
+    }
+    .text {
+      display: inline;
+    }
+    .para {
+      overflow: hidden;
+    }
+  }
+}

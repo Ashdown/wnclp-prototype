@@ -1,0 +1,29 @@
+@import 'variables';
+
+.ward-panel {
+  .main-pitch {
+    color: $header-black;
+    font: 16px/24px 'Droid Sans', sans-serif;
+    margin-top: 20px;
+    quotes: "\201C""\201D""\2018""\2019";
+    &:before {
+      color: $regular-grey;
+      content: open-quote;
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
+    }
+
+  }
+  .candidates-title {
+    color: $byline-text;
+    font: bold 14px/23px 'Droid Sans', sans-serif;
+    letter-spacing: 0;
+    margin-top: 15px;
+    text-transform: uppercase;
+  }
+  .candidate-list {
+    overflow: hidden;
+  }
+}

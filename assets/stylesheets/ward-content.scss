@@ -1,0 +1,25 @@
+@import 'variables';
+@import 'mixins';
+
+.ward-content {
+  background: $white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin: 10px 10px 0 10px;
+  padding: 30px 10px;
+  position: relative;
+  opacity: 0;
+  @include transition(opacity, 0.2s, linear);
+  &.visible {
+    opacity: 1;
+  }
+}
+
+@include respond-to(desktop) {
+  .ward-content {
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
