@@ -1,0 +1,45 @@
+@import './variables';
+@import './mixins';
+
+.officers-and-contacting-us-page {
+  padding-bottom: 50px;
+
+  .para {
+    margin-top: 15px;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .text {
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+  }
+}
+
+@include respond-to(tablet) {
+  .officers-and-contacting-us-page {
+    .profile-image {
+      float: left;
+      margin-right: 16px;
+    }
+    .text {
+      display: block;
+      margin-top: 40px;
+      text-align: left;
+    }
+    .para {
+      overflow: hidden;
+    }
+  }
+}
+
+
+
