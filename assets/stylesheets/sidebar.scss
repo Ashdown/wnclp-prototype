@@ -1,0 +1,22 @@
+@import './variables';
+@import './mixins';
+
+
+.sidebar {
+  display: none;
+}
+
+@include respond-to(tablet) {
+  .sidebar {
+    display: block;
+    width: 220px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    .red-button {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+}

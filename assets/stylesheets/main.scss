@@ -67,10 +67,17 @@
     margin: 5px 0;
   }
 
+  .sidebar-container {
+    position: relative;
+  }
+
 }
 
 @include respond-to(tablet) {
   .page {
+    .header-container {
+      min-height: 340px;
+    }
     .page-header {
       font-size: 40px;
       line-height: 48px;
@@ -81,6 +88,9 @@
     .column {
       width: 50%;
       float: left;
+    }
+    .sidebar-container {
+      padding-right: 240px;
     }
   }
 }
